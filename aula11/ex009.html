@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IDENTIFICANDO NACIONALIDADE</title>
+    <link rel="icon" type="imagem/png" href="img/icone.png" /> 
+    <style>
+        body{
+            text-align: center;
+            background:white;            
+            position:absolute;
+		    left:50%;
+		    top:50%;
+		    margin-left:-140px;
+		    margin-top:-170px;            
+        }
+        img{
+        
+		    -webkit-box-shadow: 9px 10px 7px 5px rgba(50, 50, 50, 0.77);
+		    -moz-box-shadow: 9px 10px 7px 5px rgba(50, 50, 50, 0.77);
+		    box-shadow: 9px -10px 7px 10 px rgba(50, 50, 50, 1);
+        }
+        footer {
+            
+            margin-bottom: 100%;
+	        text-align: center;
+	        padding: -20px;
+            background-color: rgb(95, 208, 243);
+	        color:black;
+            -webkit-box-shadow: 9px 10px 7px 5px rgba(50, 50, 50, 0.77);
+		    -moz-box-shadow: 9px 10px 7px 5px rgba(50, 50, 50, 0.77);
+		    box-shadow: 9px -10px 7px 10 px rgba(50, 50, 50, 1);
+        }
+        div#res{
+            padding: 5px;
+            text-align: center;
+            
+        }
+        h1{
+            text-decoration: underline;
+        }
+
+    </style>
+    
+</head>
+<body>
+    <div>
+        <img src="img/ALISSON.png" alt="paisagem1" width="220" height="220" id="alisson">
+    </div>
+    
+    <h1>Sistema de identificação</h1>
+    Informe o País <input type="text" name="text1" id="text1">
+    <input type="button" value="Verificar" onclick="ver1()">
+    <div id="res">
+
+    </div>
+    <script>
+        function ver1(){
+            var txtv = window.document.querySelector('input#text1')
+            var res = window.document.querySelector('div#res')
+            var text2 = (txtv.value)
+            res.innerHTML = `Você digitou <strong>${text2}</strong>.`
+            if (text2 == 'Brasil'){
+                res.innerHTML += `<p>Sua nacionalidade é <strong>BRASILEIRA.</strong></p>` 
+            } else if (text2 == 'Brazil'){
+                res.innerHTML += `<p>Sua nacionalidade é <strong>BRASILEIRA.</strong></p>`          
+                
+            } else {
+                res.innerHTML += `<p>Você é <strong>ESTRANGEIRO.</strong></p>`
+            }
+            res.innerHTML += `<h4>- Obrigado por utilizar nossos serviços. -</h4>`
+        }
+    </script>
+    <footer> 
+        <p><strong>© Alisson Queiroz - Todos os Direitos Reservados.</p></strong>
+    </footer>
+</body>
+</html>
